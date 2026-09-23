@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RAPP Brainstem for any MCP app</title>
-<meta name="description" content="RAPP Brainstem, your local AI agent server, set up for any MCP app.">
+<meta name="description" content="RAPP Brainstem, set up for any MCP app.">
 <link rel="canonical" href="https://kody-w.github.io/rapp-brainstem-mcp/">
 <meta property="og:title" content="RAPP Brainstem for any MCP app">
-<meta property="og:description" content="Your local AI agent server, set up for any MCP app.">
+<meta property="og:description" content="RAPP Brainstem, set up for any MCP app.">
 <meta name="theme-color" content="#0f766e">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f766e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@ a{color:var(--accent)}
 <div class="wrap">
 <header>
   <h1><span class="mark" aria-hidden="true"></span>Brainstem for any MCP app</h1>
-  <p class="lede">Your own AI agent server, running on your computer, connected to any AI app that supports MCP.</p>
+  <p class="lede">Your own AI agent server, running on your computer. Connected to any AI app that supports MCP.</p>
   <p class="paste-label">Paste this into any AI agent that can run commands</p>
   <button class="copy" id="copy" type="button" aria-label="Copy: Set up the RAPP Brainstem from kody-w.github.io/rapp-brainstem-mcp">
     <span id="prompt">Set up the RAPP Brainstem from kody-w.github.io/rapp-brainstem-mcp</span>
@@ -70,8 +70,8 @@ a{color:var(--accent)}
   <h2>Works with any MCP app.</h2>
   <p class="sub">Agents that can run commands set it up from the link. For apps that can't, use the settings below.</p>
   <ol class="steps">
-    <li><b>Installs the Brainstem</b><small>Using the official one-line installer.</small></li>
-    <li><b>Adds a small bridge</b><small>One file, the same for every app.</small></li>
+    <li><b>Installs Brainstem</b><small>Using the official installer.</small></li>
+    <li><b>Prepares the server</b><small>The same local MCP server for every app.</small></li>
     <li><b>Registers it</b><small>In your app's MCP settings, under the name <b>brainstem</b>.</small></li>
   </ol>
 </section>
@@ -118,11 +118,11 @@ irm https://kody-w.github.io/rapp-brainstem-claude/brainstem_mcp.py -OutFile &qu
     }
   }
 }</pre>
-<p>Use the user's real absolute paths (run <code>echo $HOME</code>; on Windows <code>$env:USERPROFILE</code>) in place of <code>/Users/you</code>. Config files do not expand <code>~</code>. On Windows the command is <code>C:\\Users\\you\\.brainstem\\mcp-bridge\\venv\\Scripts\\python.exe</code> and the argument is <code>C:\\Users\\you\\.brainstem\\mcp-bridge\\brainstem_mcp.py</code> (backslashes doubled inside JSON). Some apps name the top-level key <code>servers</code> or <code>mcp</code>; follow the app's own docs for the key and file location. If the app has Node.js 18+ and no Python, a zero-dependency Node version of the same bridge works too: <code>node brainstem_mcp.js</code> (<a href="https://kody-w.github.io/rapp-brainstem-claude/brainstem_mcp.js">brainstem_mcp.js</a>).</p>
-<p>Per-app pages with exact steps: <a href="https://kody-w.github.io/rapp-brainstem-claude/">Claude Code</a>, <a href="https://kody-w.github.io/rapp-brainstem-copilot/">Copilot CLI</a>, <a href="https://kody-w.github.io/rapp-brainstem-codex/">Codex</a>, <a href="https://kody-w.github.io/rapp-brainstem-vscode/">VS Code</a>, <a href="https://kody-w.github.io/rapp-brainstem-cursor/">Cursor</a>, <a href="https://kody-w.github.io/rapp-brainstem-gemini/">Gemini CLI</a>, <a href="https://kody-w.github.io/rapp-brainstem-claude-desktop/">Claude Desktop</a>, <a href="https://kody-w.github.io/rapp-brainstem-windsurf/">Windsurf</a>, <a href="https://kody-w.github.io/rapp-brainstem-cline/">Cline</a>, <a href="https://kody-w.github.io/rapp-brainstem-goose/">Goose</a>, <a href="https://kody-w.github.io/rapp-brainstem-opencode/">OpenCode</a>, <a href="https://kody-w.github.io/rapp-brainstem-kiro/">Kiro</a>.</p>
+<p>Use the user's real absolute paths (run <code>echo $HOME</code>; on Windows <code>$env:USERPROFILE</code>) in place of <code>/Users/you</code>. Config files do not expand <code>~</code>. On Windows the command is <code>C:\\Users\\you\\.brainstem\\mcp-bridge\\venv\\Scripts\\python.exe</code> and the argument is <code>C:\\Users\\you\\.brainstem\\mcp-bridge\\brainstem_mcp.py</code> (backslashes doubled inside JSON). Some apps name the top-level key <code>servers</code> or <code>mcp</code>; follow the app's own docs for the key and file location.</p>
+<p>Per-app pages with exact steps: <a href="https://kody-w.github.io/rapp-brainstem-claude-desktop/">Claude Desktop</a>, <a href="https://kody-w.github.io/rapp-brainstem-claude/">Claude Code</a>, <a href="https://kody-w.github.io/rapp-brainstem-cline/">Cline</a>, <a href="https://kody-w.github.io/rapp-brainstem-codex/">Codex CLI</a>, <a href="https://kody-w.github.io/rapp-brainstem-copilot/">Copilot CLI</a>, <a href="https://kody-w.github.io/rapp-brainstem-cursor/">Cursor</a>, <a href="https://kody-w.github.io/rapp-brainstem-gemini/">Gemini CLI</a>, <a href="https://kody-w.github.io/rapp-brainstem-goose/">Goose</a>, <a href="https://kody-w.github.io/rapp-brainstem-kiro/">Kiro</a>, <a href="https://kody-w.github.io/rapp-brainstem-opencode/">OpenCode</a>, <a href="https://kody-w.github.io/rapp-brainstem-vscode/">VS Code</a>, <a href="https://kody-w.github.io/rapp-brainstem-windsurf/">Windsurf</a>.</p>
 
 <h3>4. Confirm</h3>
-<p>Restart the app or reload its MCP servers, and check <code>brainstem</code> is listed with two tools.</p>
+<p>Restart the app or reload its MCP servers, and check <code>brainstem</code> is listed with its tools.</p>
 <p>Then call the <code>capabilities</code> tool and tell the user which agents their Brainstem has. The bridge gives two tools. <code>chat(user_input, session_id?)</code> sends a plain-language request; pass the returned <code>session_id</code> to continue the conversation. <code>capabilities()</code> reports status, model and agents.</p>
 </div>
   </details>
@@ -130,7 +130,7 @@ irm https://kody-w.github.io/rapp-brainstem-claude/brainstem_mcp.py -OutFile &qu
 </div>
 </main>
 <footer class="wrap">
-  RAPP Brainstem · installer from <a href="https://github.com/kody-w/rapp-installer">kody-w/rapp-installer</a> · bridge source: <a href="https://github.com/kody-w/rapp-brainstem-claude">bridge + all hosts</a>
+  RAPP Brainstem · installer from <a href="https://github.com/kody-w/rapp-installer">kody-w/rapp-installer</a> · pages built with <a href="https://github.com/kody-w/ai-setup-pages">ai-setup-pages</a>
 </footer>
 <script>
 const btn=document.getElementById('copy'),icon=document.getElementById('icon');
